@@ -1,0 +1,383 @@
+/* :root{
+  --purple: #4959be;
+  --b-radius: 12px;
+}
+
+header {
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+nav{
+    padding: 20px 0 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#logo img{
+    display: block;
+    height: 40px;
+    object-fit: contain;
+}
+
+#logo h3 {
+  font: 500 20px Montserrat;
+  color: var(--purple);
+  line-height: 1;
+}
+hr{
+    margin-bottom: 0;
+ }
+
+.menu-btn {
+  border: none;
+  background: linear-gradient(to right, var(--purple), #516ed3);
+  border-radius: var(--b-radius);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.collapse-menu {
+    top:0;
+    background: #f8f9fa;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    height: 50vh;
+    padding: 30px 0;
+    background-color: #fff
+}
+
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease; 
+}
+
+.collapse.show {
+  transition: auto !important;
+}
+
+
+.icons{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: auto;
+}
+
+
+.icons a{
+    background: linear-gradient(to right, var(--purple), #516ed3);
+    border-radius: var(--b-radius);
+    cursor: pointer;
+    padding: 13px;
+}
+
+.menumobile ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menumobile ul li a {
+  font: 21px Montserrat;
+  color: #333;
+  text-decoration: none;
+
+}
+
+.menumobile ul li  a:hover {
+  color: var(--purple);
+}
+
+#menubutton{
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(to right, var(--purple), #516ed3);
+    width: 95%;
+    border-radius: var(--b-radius);
+    font: 16px Montserrat;
+    padding: 18px 0;
+    margin: 40px  auto;
+    justify-content: center;
+}
+
+.nav-menu ul li a{
+    text-decoration: none;
+    color: #333;
+    font: 16px Poppins;
+    display: flex;
+    align-items: center;
+}
+.nav-menu{
+    display: none;
+}
+.nav-menu ul{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+#nav-button{
+    display: none;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(to right, var(--purple), #516ed3);
+    border-radius: var(--b-radius);
+    font: 14px Montserrat;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center
+}
+
+.header-top{
+    background: linear-gradient(to right, var(--purple), #516ed3);
+    padding: 10px 0;
+    display: none;
+}
+.header-top-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-top-content a{
+    text-decoration: none;
+    color: #fff;
+    font: 14px Montserrat;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#line{
+    width: 1px;
+    height: 100%;
+    background-color: #fff;
+}
+.header-top-right{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+@media (min-width: 992px){
+    .menu-btn{
+        display: none;
+    }
+    .header-top{
+        display: flex;
+    }
+    .nav-menu , #nav-button {
+        display: flex;
+    }
+} */
+ :root {
+  --purple: #4959be;
+  --b-radius: 12px;
+}
+
+/* Header və nav */
+header {
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+}
+nav {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#logo img {
+  display: block;
+  height: 40px;
+  object-fit: contain;
+}
+#logo h3 {
+  font: 500 20px Montserrat;
+  color: var(--purple);
+  line-height: 1;
+}
+
+hr {
+  margin-bottom: 0;
+}
+
+
+.menu-btn {
+  border: none;
+  background: linear-gradient(to right, var(--purple), #516ed3);
+  border-radius: var(--b-radius);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+
+.offcanvas {
+  background: #fff;
+  padding: 20px;
+  height: 50vh;
+}
+.offcanvas-top{
+    height: 70vh !important;
+    overflow-y: auto;
+}
+.offcanvas.offcanvas-top{
+    top: 13%;
+}
+.offcanvas-header {
+  border-bottom: 1px solid #eee;
+}
+.icons {
+  display: flex;
+  gap: 20px;
+}
+.icons a {
+  background: linear-gradient(to right, var(--purple), #516ed3);
+  border-radius: var(--b-radius);
+  padding: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.offcanvas .menumobile ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.offcanvas .menumobile ul li a {
+  font: 21px Montserrat;
+  color: #333;
+  text-decoration: none;
+}
+.offcanvas .menumobile ul li a:hover {
+  color: var(--purple);
+}
+.offcanvas #menubutton {
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(to right, var(--purple), #516ed3);
+  width: 100%;
+  border-radius: var(--b-radius);
+  font: 16px Montserrat;
+  padding: 18px 0;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font: 16px Poppins;
+  display: flex;
+  align-items: center;
+}
+.nav-menu {
+  display: none;
+}
+.nav-menu ul {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+#nav-button {
+  display: none;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(to right, var(--purple), #516ed3);
+  border-radius: var(--b-radius);
+  font: 14px Montserrat;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header top */
+.header-top {
+  background: linear-gradient(to right, var(--purple), #516ed3);
+  padding: 10px 0;
+  display: none;
+}
+.header-top-content {
+  display: flex;
+  justify-content: space-between;
+}
+.header-top-content a {
+  text-decoration: none;
+  color: #fff;
+  font: 14px Montserrat;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#line {
+  width: 1px;
+  height: 100%;
+  background-color: #fff;
+}
+.header-top-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+
+.hero__section{
+    padding: 0 20px;
+}
+.hero__section-content{
+    margin-top: 20px;
+}
+
+@media (min-width: 992px) {
+  .menu-btn {
+    display: none;
+  }
+  .header-top {
+    display: flex;
+  }
+  .nav-menu,
+  #nav-button {
+    display: flex;
+  }
+}
