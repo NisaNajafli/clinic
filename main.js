@@ -28,3 +28,18 @@ mainDiv.addEventListener('click', function(){
   this.children.item(0).classList.toggle('fa-times');
   this.classList.toggle('open');
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  new Swiper('.mySwiper', {
+  loop: false, // 👈 bunu false et
+  slidesPerView: 1,
+  spaceBetween: 30,
+  autoplay: { delay: 3000, disableOnInteraction: false },
+  pagination: { el: '.swiper-pagination', clickable: true },
+  navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+  breakpoints: {
+    768: { slidesPerView: 1 },
+    1200: { slidesPerView: 2 }
+  }
+});
+});

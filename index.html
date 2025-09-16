@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.css">
   <title>Clinic</title>
 </head>
@@ -42,12 +43,11 @@
 
       <div class="nav-menu">
         <ul>
-          <li><a href="#">Главная</a></li>
-          <li><a href="#">Почему мы</a></li>
-          <li><a href="#">Цены</a></li>
-          <li><a href="#">Отзывы</a></li>
-          <li><a href="#">Схема работы</a></li>
-          <li><a href="#">Вопросы и ответы</a></li>
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Больничный лист</a></li>
+          <li><a href="#">Справки</a></li>
+          <li><a href="#">Рецепты</a></li>
+          <li><a href="#">Подлинные документы</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
       </div>
@@ -88,12 +88,11 @@
 
     <div class="menumobile">
       <ul class="list-unstyled">
-        <li><a href="#">Главная</a></li>
-        <li><a href="#">Почему мы</a></li>
-        <li><a href="#">Цены</a></li>
-        <li><a href="#">Отзывы</a></li>
-        <li><a href="#">Схема работы</a></li>
-        <li><a href="#">Вопросы и ответы</a></li>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Больничный лист</a></li>
+        <li><a href="#">Справки</a></li>
+        <li><a href="#">Рецепты</a></li>
+        <li><a href="#">Подлинные документы</a></li>
         <li><a href="#">Контакты</a></li>
       </ul>
       <a  href="#" class=" btn btn2">Оставить Заявку</a>
@@ -147,7 +146,6 @@
   <section class="hero">
     <div class="container hero-inner">
       <div class="copy">
-        <span class="eyebrow">Точная диагностика и эффективное лечение</span>
         <h1>Современная клиника — современные решения</h1>
         <p class="lead">
           Мы используем передовые технологии и опыт специалистов, чтобы ваше
@@ -191,7 +189,8 @@
     <h3 class="title">О нас</h3>
 
     <div class="about__section-content container">
-      <img src="img/aboutimg.webp" alt="">
+      <img id="aboutdesktop" src="img/aboutimg.webp" alt="">
+      <img  id="aboutmobile" src="img/aboutmobile.webp" alt="">
 
       <div class="about__section-texts">
         <a class="btn1" href="">Рецепты для вас</a>
@@ -245,6 +244,74 @@
       </div>
     </div>
   </section>
+
+  <section class="services-section">
+    <div class="container">
+      <div class="services-top">
+        <h2 class="services-title">Услуги</h2>
+        <p class="services-text">
+          Наши медицинские услуги направлены на решение различных медицинских проблем. <br>
+          Вы можете обратиться к нам за различными видами рецептов и документов.
+        </p>
+        <a href="">Все услуги 
+          <svg
+           xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="27" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="m506.134 241.843-.018-.019-104.504-104c-7.829-7.791-20.492-7.762-28.285.068-7.792 7.829-7.762 20.492.067 28.284L443.558 236H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h423.557l-70.162 69.824c-7.829 7.792-7.859 20.455-.067 28.284 7.793 7.831 20.457 7.858 28.285.068l104.504-104 .018-.019c7.833-7.818 7.808-20.522-.001-28.314z" fill="#1b94af" opacity="1" data-original="#1b94af" class=""></path></g>
+          </svg>
+        </a>
+      </div>
+
+      <div class="services-grid">
+
+        <a href="#" class="service-item">
+          <h3>Медицинские рецепты</h3>
+          <div class="arrow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="27" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="m506.134 241.843-.018-.019-104.504-104c-7.829-7.791-20.492-7.762-28.285.068-7.792 7.829-7.762 20.492.067 28.284L443.558 236H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h423.557l-70.162 69.824c-7.829 7.792-7.859 20.455-.067 28.284 7.793 7.831 20.457 7.858 28.285.068l104.504-104 .018-.019c7.833-7.818 7.808-20.522-.001-28.314z" fill="#1b94af" opacity="1" data-original="#1b94af" class=""></path></g>
+            </svg>
+          </div>
+        </a>
+
+        <a href="#" class="service-item">
+          <h3>Медицинские справки</h3>
+          <div class="arrow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="27" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="m506.134 241.843-.018-.019-104.504-104c-7.829-7.791-20.492-7.762-28.285.068-7.792 7.829-7.762 20.492.067 28.284L443.558 236H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h423.557l-70.162 69.824c-7.829 7.792-7.859 20.455-.067 28.284 7.793 7.831 20.457 7.858 28.285.068l104.504-104 .018-.019c7.833-7.818 7.808-20.522-.001-28.314z" fill="#1b94af" opacity="1" data-original="#1b94af" class=""></path></g>
+            </svg>
+          </div>
+        </a>
+
+        <a href="#" class="service-item">
+          <h3>Электронные рецепты</h3>
+          <div class="arrow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="27" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="m506.134 241.843-.018-.019-104.504-104c-7.829-7.791-20.492-7.762-28.285.068-7.792 7.829-7.762 20.492.067 28.284L443.558 236H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h423.557l-70.162 69.824c-7.829 7.792-7.859 20.455-.067 28.284 7.793 7.831 20.457 7.858 28.285.068l104.504-104 .018-.019c7.833-7.818 7.808-20.522-.001-28.314z" fill="#1b94af" opacity="1" data-original="#1b94af" class=""></path></g>
+            </svg>
+          </div>
+        </a>
+
+        <a href="#" class="service-item">
+          <h3>Подлинные документы</h3>
+          <div class="arrow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="27" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="m506.134 241.843-.018-.019-104.504-104c-7.829-7.791-20.492-7.762-28.285.068-7.792 7.829-7.762 20.492.067 28.284L443.558 236H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h423.557l-70.162 69.824c-7.829 7.792-7.859 20.455-.067 28.284 7.793 7.831 20.457 7.858 28.285.068l104.504-104 .018-.019c7.833-7.818 7.808-20.522-.001-28.314z" fill="#1b94af" opacity="1" data-original="#1b94af" class=""></path></g>
+            </svg>
+          </div>
+        </a>
+
+        <a href="#" class="service-item">
+          <h3>Больничный лист</h3>
+          <div class="arrow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="27" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="m506.134 241.843-.018-.019-104.504-104c-7.829-7.791-20.492-7.762-28.285.068-7.792 7.829-7.762 20.492.067 28.284L443.558 236H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h423.557l-70.162 69.824c-7.829 7.792-7.859 20.455-.067 28.284 7.793 7.831 20.457 7.858 28.285.068l104.504-104 .018-.019c7.833-7.818 7.808-20.522-.001-28.314z" fill="#1b94af" opacity="1" data-original="#1b94af" class=""></path></g>
+            </svg>
+          </div>
+          
+        </a>
+
+      </div>
+    </div>
+  </section>
+
 
 
   <section class="why-online">
@@ -301,6 +368,117 @@
         Оригинальный рецептурный бланк в конверте в скором времени принесет
         почтальон и передаст вам лично в руки.
       </div>
+    </div>
+  </section>
+
+    <section class="testimonials__section">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide testimonial-card">
+          <div class="testimonial-header">
+            <h3>Natalia</h3>
+            <span class="title">Lorem Lorem</span>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores obcaecati sapiente mollitia necessitatibus eius illum soluta exercitationem. At, voluptas quibusdam.
+          </p>
+        </div>
+        <div class="swiper-slide testimonial-card">
+          <div class="testimonial-header">
+            <h3>Natalia</h3>
+            <span class="title">Lorem Lorem</span>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores obcaecati sapiente mollitia necessitatibus eius illum soluta exercitationem. At, voluptas quibusdam.
+          </p>
+        </div>
+        <div class="swiper-slide testimonial-card">
+          <div class="testimonial-header">
+            <h3>Natalia</h3>
+            <span class="title">Lorem Lorem</span>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores obcaecati sapiente mollitia necessitatibus eius illum soluta exercitationem. At, voluptas quibusdam.
+          </p>
+        </div>
+        <div class="swiper-slide testimonial-card">
+          <div class="testimonial-header">
+            <h3>Natalia</h3>
+            <span class="title">Lorem Lorem</span>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores obcaecati sapiente mollitia necessitatibus eius illum soluta exercitationem. At, voluptas quibusdam.
+          </p>
+        </div>
+        <div class="swiper-slide testimonial-card">
+          <div class="testimonial-header">
+            <h3>Natalia</h3>
+            <span class="title">Lorem Lorem</span>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores obcaecati sapiente mollitia necessitatibus eius illum soluta exercitationem. At, voluptas quibusdam.
+          </p>
+        </div>
+        <div class="swiper-slide testimonial-card">
+          <div class="testimonial-header">
+            <h3>Natalia</h3>
+            <span class="title">Lorem Lorem</span>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores obcaecati sapiente mollitia necessitatibus eius illum soluta exercitationem. At, voluptas quibusdam.
+          </p>
+        </div>
+        <div class="swiper-slide testimonial-card">
+          <div class="testimonial-header">
+            <h3>Natalia</h3>
+            <span class="title">Lorem Lorem</span>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores obcaecati sapiente mollitia necessitatibus eius illum soluta exercitationem. At, voluptas quibusdam.
+          </p>
+        </div>
+        <div class="swiper-slide testimonial-card">
+          <div class="testimonial-header">
+            <h3>Natalia</h3>
+            <span class="title">Lorem Lorem</span>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores obcaecati sapiente mollitia necessitatibus eius illum soluta exercitationem. At, voluptas quibusdam.
+          </p>
+        </div>
+        <div class="swiper-slide testimonial-card">
+          <div class="testimonial-header">
+            <h3>Natalia</h3>
+            <span class="title">Lorem Lorem</span>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores obcaecati sapiente mollitia necessitatibus eius illum soluta exercitationem. At, voluptas quibusdam.
+          </p>
+        </div>
+        <div class="swiper-slide testimonial-card">
+          <div class="testimonial-header">
+            <h3>Natalia</h3>
+            <span class="title">Lorem Lorem</span>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores obcaecati sapiente mollitia necessitatibus eius illum soluta exercitationem. At, voluptas quibusdam.
+          </p>
+        </div>
+      </div>
+
+      <!-- Navigation buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
   </section>
 
@@ -371,23 +549,85 @@
   <div class="footer-content container">
     <div class="footer-top">
       <div class="contact">
-        <p>Рабочие часы: пн-пт с 10:00 до 18:00</p>
-        <a href="">+7 (999) 999-99-99</a>
-        <a href="">8 (888) 888-88-88</a>
+        <p> 
+          <svg
+           xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" x="0" y="0" viewBox="0 0 443.294 443.294" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M221.647 0C99.433 0 0 99.433 0 221.647s99.433 221.647 221.647 221.647 221.647-99.433 221.647-221.647S343.861 0 221.647 0zm0 415.588c-106.941 0-193.941-87-193.941-193.941s87-193.941 193.941-193.941 193.941 87 193.941 193.941-87 193.941-193.941 193.941z" fill="#000000" opacity="1" data-original="#000000" class=""></path><path d="M235.5 83.118h-27.706v144.265l87.176 87.176 19.589-19.589-79.059-79.059z" fill="#000000" opacity="1" data-original="#000000" class=""></path></g>
+          </svg>
+          Рабочие часы: пн-пт с 10:00 до 18:00
+        </p>
+        <a href="">
+          <svg 
+          xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 513.64 513.64" fill="#333"><path d="m499.66 376.96-71.68-71.68c-25.6-25.6-69.12-15.359-79.36 17.92-7.68 23.041-33.28 35.841-56.32 30.72-51.2-12.8-120.32-79.36-133.12-133.12-7.68-23.041 7.68-48.641 30.72-56.32 33.28-10.24 43.52-53.76 17.92-79.36l-71.68-71.68c-20.48-17.92-51.2-17.92-69.12 0L18.38 62.08c-48.64 51.2 5.12 186.88 125.44 307.2s256 176.641 307.2 125.44l48.64-48.64c17.921-20.48 17.921-51.2 0-69.12z"/>
+          </svg>
+          7 (999) 999 99 99
+        </a>
+        <a href="">
+          <svg 
+          xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 513.64 513.64" fill="#333"><path d="m499.66 376.96-71.68-71.68c-25.6-25.6-69.12-15.359-79.36 17.92-7.68 23.041-33.28 35.841-56.32 30.72-51.2-12.8-120.32-79.36-133.12-133.12-7.68-23.041 7.68-48.641 30.72-56.32 33.28-10.24 43.52-53.76 17.92-79.36l-71.68-71.68c-20.48-17.92-51.2-17.92-69.12 0L18.38 62.08c-48.64 51.2 5.12 186.88 125.44 307.2s256 176.641 307.2 125.44l48.64-48.64c17.921-20.48 17.921-51.2 0-69.12z"/>
+          </svg>
+          8 (888) 888 88 88
+        </a>
       </div>
       <div class="mail">
-        <a href="">pr@onlineresept.ru</a>
+        <a href="">
+          <svg
+           xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512" fill="#333"><path d="M467 76H45C20.137 76 0 96.262 0 121v270c0 24.885 20.285 45 45 45h422c24.655 0 45-20.03 45-45V121c0-24.694-20.057-45-45-45zm-6.302 30L287.82 277.967c-8.5 8.5-19.8 13.18-31.82 13.18s-23.32-4.681-31.848-13.208L51.302 106h409.396zM30 384.894V127.125L159.638 256.08 30 384.894zm21.321 21.106h409.358L352.362 256.08 482 127.125v257.769z"/>
+          </svg>
+          pr@onlineresept.ru
+        </a>
       </div>
       <div class="footer-registration">
-        
+        <a href="">
+          <svg
+           xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="33" height="33" x="0" y="0" viewBox="0 0 100 100" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M84.234 78.581C82.22 72.587 74.193 68.835 68.47 66.32c-2.242-.982-8.449-2.648-9.195-5.471-.267-1.017-.231-1.976-.012-2.895a5.596 5.596 0 0 1-1.057.105h-3.729a5.402 5.402 0 0 1-5.396-5.397c0-2.973 2.42-5.39 5.396-5.39h3.729c1.232 0 2.4.417 3.342 1.161a23.997 23.997 0 0 0 3.955-.866c1.631-3.417 2.903-7.503 3.188-11.02 1.217-15.048-8.008-23.852-21.235-22.33-9.617 1.107-15.362 8.278-15.983 17.51-.628 9.41 2.861 16.36 6.567 21.458 1.623 2.229 3.328 3.662 3.066 6.348-.304 3.176-3.7 4.061-6.129 5.037-2.878 1.156-5.978 2.91-7.442 3.721-5.043 2.785-10.578 6.139-11.822 10.727-2.755 10.168 6.549 13.248 14.23 14.67C36.535 94.904 43.968 95 50.082 95c11.059 0 30.945-.443 34.152-8.756.912-2.359.521-6.118 0-7.663z" fill="#000000" opacity="1" data-original="#000000" class=""></path><path d="M60.566 51.143a2.818 2.818 0 0 0-2.358-1.283h-3.729a2.81 2.81 0 1 0 0 5.618h3.729a2.786 2.786 0 0 0 2.479-1.519c5.199-.409 9.721-1.997 12.895-4.342.729.47 1.591.745 2.521.745h.234a4.687 4.687 0 0 0 4.688-4.693v-9.368a4.673 4.673 0 0 0-2.672-4.224C77.665 17.034 65.212 5 50 5S22.333 17.034 21.648 32.077a4.67 4.67 0 0 0-2.674 4.224v9.368a4.687 4.687 0 0 0 4.684 4.693h.237a4.688 4.688 0 0 0 4.687-4.693v-9.368a4.677 4.677 0 0 0-2.608-4.192C26.643 19.434 37.161 9.331 50 9.331c12.834 0 23.357 10.103 24.023 22.778a4.68 4.68 0 0 0-2.605 4.192v9.368c0 .622.121 1.201.334 1.742-2.732 1.955-6.709 3.348-11.186 3.732z" fill="#000000" opacity="1" data-original="#000000" class=""></path></g>
+          </svg>
+          Онлайн Kонсультация
+        </a>
       </div>
+    </div>
+    <hr>
+    <div class="footer-main">
+      <div class="footer-menu">
+        <div>
+          <a href="">О нас</a>
+          <a href="">Контакты</a>
+          
+        </div>
+        <div>
+          <a href="">Рецепты</a>
+          <a href="">Справки</a>
+        </div>
+        <div>
+          
+          <a href="">Больничный лист</a>
+          <a href="">Подлинные документы</a>
+          
+        </div>
+      </div>
+      <div class="main-footer-right">
+        <a href="">Найдите нас на карте</a>
+        <div class="iconsfooter">
+          <a href="">
+          <svg
+          xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" x="0" y="0" viewBox="0 0 682 682.667" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill-rule="evenodd" d="M544.387 93.008C484.512 33.063 404.883.035 320.05 0 145.246 0 2.98 142.262 2.91 317.113c-.024 55.895 14.577 110.457 42.331 158.551L.25 640l168.121-44.102c46.324 25.27 98.477 38.586 151.55 38.602h.134c174.785 0 317.066-142.273 317.132-317.133.036-84.742-32.921-164.418-92.8-224.36zM320.05 580.94h-.11c-47.296-.02-93.683-12.73-134.16-36.742l-9.62-5.715-99.766 26.172 26.628-97.27-6.27-9.972c-26.386-41.969-40.32-90.476-40.296-140.281.055-145.332 118.305-263.57 263.7-263.57 70.406.023 136.59 27.476 186.355 77.3s77.156 116.051 77.133 186.485C583.582 462.69 465.34 580.94 320.05 580.94zm144.586-197.418c-7.922-3.968-46.883-23.132-54.149-25.78-7.258-2.645-12.547-3.962-17.824 3.968-5.285 7.93-20.469 25.781-25.094 31.066-4.625 5.29-9.242 5.953-17.168 1.985-7.925-3.965-33.457-12.336-63.726-39.332-23.555-21.012-39.457-46.961-44.082-54.89-4.617-7.938-.04-11.813 3.476-16.173 8.578-10.652 17.168-21.82 19.809-27.105 2.644-5.29 1.32-9.918-.664-13.883-1.977-3.965-17.824-42.969-24.426-58.84-6.437-15.445-12.965-13.36-17.832-13.601-4.617-.231-9.902-.278-15.187-.278-5.282 0-13.868 1.98-21.133 9.918-7.262 7.934-27.73 27.102-27.73 66.106s28.394 76.683 32.355 81.972c3.96 5.29 55.879 85.328 135.367 119.649 18.906 8.172 33.664 13.043 45.176 16.695 18.984 6.031 36.254 5.18 49.91 3.14 15.226-2.277 46.879-19.171 53.488-37.68 6.602-18.51 6.602-34.374 4.617-37.683-1.976-3.304-7.261-5.285-15.183-9.254zm0 0" fill="#333" opacity="1" data-original="#fff" class=""></path></g> 
+          </svg>
+          </a>
+          <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512" fill="#333"><path d="M256 0C114.62 0 0 114.62 0 256s114.62 256 256 256 256-114.62 256-256S397.38 0 256 0zM374.66 174.1c-3.85 40.48-20.52 138.71-29 184.05-3.59 19.19-10.66 25.62-17.5 26.25-14.86 1.37-26.15-9.83-40.55-19.27-22.53-14.77-35.26-23.96-57.13-38.37-25.28-16.66-8.89-25.81 5.51-40.77 3.77-3.92 69.27-63.5 70.54-68.9.16-.68.31-3.2-1.19-4.53s-3.71-.87-5.3-.51c-2.26.51-38.26 24.3-107.98 71.37-10.22 7.02-19.47 10.43-27.77 10.26-9.14-.2-26.72-5.17-39.79-9.42-16.03-5.21-28.77-7.97-27.66-16.82.57-4.61 6.92-9.32 19.04-14.14 74.63-32.52 124.39-53.95 149.29-64.31 71.1-29.57 85.87-34.71 95.5-34.88 12.06-.21 14.97 9.74 13.99 19.99z"/></svg></a>
+          <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512" fill="#333"><path d="M467 76H45C20.137 76 0 96.262 0 121v270c0 24.885 20.285 45 45 45h422c24.655 0 45-20.03 45-45V121c0-24.694-20.057-45-45-45zm-6.302 30L287.82 277.967c-8.5 8.5-19.8 13.18-31.82 13.18s-23.32-4.681-31.848-13.208L51.302 106h409.396zM30 384.894V127.125L159.638 256.08 30 384.894zm21.321 21.106h409.358L352.362 256.08 482 127.125v257.769z"/></svg></a>
+          <a href="" id="phone-header"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 513.64 513.64" fill="#333"><path d="m499.66 376.96-71.68-71.68c-25.6-25.6-69.12-15.359-79.36 17.92-7.68 23.041-33.28 35.841-56.32 30.72-51.2-12.8-120.32-79.36-133.12-133.12-7.68-23.041 7.68-48.641 30.72-56.32 33.28-10.24 43.52-53.76 17.92-79.36l-71.68-71.68c-20.48-17.92-51.2-17.92-69.12 0L18.38 62.08c-48.64 51.2 5.12 186.88 125.44 307.2s256 176.641 307.2 125.44l48.64-48.64c17.921-20.48 17.921-51.2 0-69.12z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="footer-bottom">
+      <p>Copyright ©️ 2025 </p>
     </div>
   </div>
 </footer>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://kit.fontawesome.com/6e8461733e.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
