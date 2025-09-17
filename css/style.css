@@ -86,16 +86,19 @@ hr {
 
 .offcanvas {
   background: #fff;
-  padding: 20px;
-  height: 50vh;
+  padding: 40px;
+  min-height: 50vh;
+  height: 100%;
   transition: 1.1s ease;
 }
-.offcanvas-top{
-    height: 70vh !important;
-    overflow-y: auto;
+.offcanvas-backdrop{
+  height: 100%;
+  width: 100%;
 }
 .offcanvas.offcanvas-top{
-    top: 13%;
+    top: 12%;
+    height: 50vh;  
+    overflow-y: auto;
 }
 .offcanvas-header {
   border-bottom: 1px solid #eee;
@@ -142,8 +145,17 @@ hr {
   margin-top: 30px;
   justify-content: center;
 }
-
-
+#canvasbtn{
+  width: 100%;
+  margin: auto;
+  font-size: 17px !important;
+  padding: 10px;
+}
+.menumobile{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
 .header-top {
   background: linear-gradient(to right, var(--purple), #1b94af);
   padding: 10px 0;
@@ -934,6 +946,7 @@ main{
   position: relative;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   gap: 60px;
   padding: 80px;
   border-radius: 24px;
@@ -979,6 +992,7 @@ main{
   width: 30%;
   display: flex;
   flex-direction: column;
+  align-items:flex-end;
   gap: 30px;
 }
 
@@ -1268,6 +1282,142 @@ footer hr {
 .swiper-pagination-bullet-active {
   background: #f5b301;
 }
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  font: 26px Montserrat;
+  margin: 220px auto 40px auto;
+}
+.breadcrumb a {
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.breadcrumb a:hover {
+  color: #105f70;
+}
+.breadcrumb span {
+  color: #333;
+}
+
+
+
+.contact__section {
+  padding: 60px 0;
+  background: #f7f8fa;
+  position: relative;
+}
+
+.contact__section h2{
+  font: 700 30px Montserrat;
+  color: #333;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.contact__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact__map {
+  width: 60%;
+  min-height: 350px;
+  border-radius: var(--real-border-radius);
+  overflow: hidden;
+}
+
+.contact__info {
+  width: 39%;
+  background: #e9f5fa;
+  border-radius: var(--real-border-radius);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contact__item {
+  display: flex;
+  gap: 20px;
+  align-items:center
+}
+.contact__item a{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font: 16px Montserrat;
+}
+.contact__item span{
+  font: 700 16px Montserrat;
+  color: #333
+}
+
+.contact__item > div{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact__item p{
+  font: 700 16px Montserrat;
+  color: #333
+}
+.contacticons{
+  display: flex;
+  gap: 20px;
+}
+
+.contacticons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;         
+  height: 40px;
+  background-color: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: var(--b-radius);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px 6px rgba(0,0,0,0.1);  
+  color: var(--purple);                 
+}
+.contacticons a svg {
+  width: 20px;
+  height: 20px;
+  transition: fill 0.3s ease;
+}
+
+.contacticons a:hover {
+  border-color: var(--purple);
+  transform: translateY(-2px);         
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.contact__info a {
+  color: #105f70;
+  text-decoration: none;
+}
+
+.contact__info a:hover {
+  text-decoration: underline;
+}
+
+.contact__btn {
+  display: inline-block;
+  background: linear-gradient(to right, #105f70, #1b94af);
+  color: #fff !important;
+  padding: 15px 25px;
+  text-align: center;
+  border-radius: 12px;
+  font: 700 18px Montserrat;
+  transition: background 0.3s;
+}
+.contact__btn:hover {
+  opacity: 0.9;
+}
 
 
 @media (max-width: 1200px){
@@ -1275,10 +1425,10 @@ footer hr {
     font-size: 29px;
   }
   .btn1{
-    font-size: 10px;
+    font-size: 11px;
   }
   .btn{
-    font-size: 9px !important;
+    font-size: 11px !important;
   }
   .about__section-texts p{
     font-size: 17px;
@@ -1310,6 +1460,16 @@ footer hr {
   .card h3{
     font-size: 18px;
   }
+  .contact__wrapper{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .contact__map{
+    width: 100%;
+  }
+  .contact__info{
+    width: 100%;
+  }
 }
 
 @media (max-width: 992px) {
@@ -1336,7 +1496,7 @@ footer hr {
   }
   #aboutmobile{
     display: flex;
-    max-width: 350px;
+    max-width: 262px;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1377,14 +1537,81 @@ footer hr {
   .footer-bottom {
     flex-direction: column;
     text-align: center;
-    align-items: center;
   }
   .footer-registration a {
     margin-top: 20px;
   }
+  .footer-main{
+    gap: 40px;
+  }
+  .onfooter-texts p{
+    font-size: 10px;
+    width: 100%;
+  }
+  .premium-btn{
+    font-size: 8px;
+  }
 }
 
-
+@media (max-width: 510px){
+  #aboutmobile{
+    max-width: 220px;
+  }
+  .btn1{
+    padding: 10px;
+    font-size: 7px !important;
+  }
+  .about__section-texts h2{
+    font-size: 25px;
+  }
+  .btn{
+    padding: 12px 9px !important;
+    font-size: 7px !important;
+  }
+  .about__section-texts ul li{
+    font-size: 12px;
+  }
+  .about__section-texts p{
+    font-size: 15px;
+  }
+  .text-content h4{
+    font-size: 22px;
+  }
+  .prescription-section-content p{
+    font-size: 13px;
+  }
+  .services-text{
+    display: none;
+  }
+  .services-top {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer-menu {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    gap: 10px;
+  }
+  .footer-top p, .footer-top a{
+    font-size: 14px;
+  }
+  .onfooter-texts h5{
+    font-size: 21px;
+  }
+  .onfooter__section-content{
+    padding: 80px 20px;
+  }
+  .onfooter-texts h5{
+    font-size: 17px;
+  }
+  .onfooter-texts p{
+    font-size: 8px;
+  }
+  .premium-btn{
+    padding: 14px 12px;
+  }
+  
+}
 
 @media (max-width: 900px) {
     .actions,.hero{justify-content:center;text-align:center;}
