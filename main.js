@@ -31,7 +31,7 @@ mainDiv.addEventListener('click', function(){
 
 document.addEventListener('DOMContentLoaded', function () {
   new Swiper('.mySwiper', {
-  loop: false, // 👈 bunu false et
+  loop: true, 
   slidesPerView: 1,
   spaceBetween: 30,
   autoplay: { delay: 3000, disableOnInteraction: false },
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
   navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
   breakpoints: {
     768: { slidesPerView: 1 },
-    1200: { slidesPerView: 2 }
+    1200: { slidesPerView: 3 }
   }
 });
 });
