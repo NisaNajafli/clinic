@@ -23,11 +23,12 @@ window.addEventListener("scroll", function () {
   }
 });
 
-var mainDiv = document.getElementById('main-button');
-mainDiv.addEventListener('click', function(){
-  this.children.item(0).classList.toggle('fa-times');
+const mainButton = document.getElementById('main-button');
+
+mainButton.addEventListener('click', function () {
   this.classList.toggle('open');
 });
+
 
 document.addEventListener('DOMContentLoaded', function () {
   new Swiper('.mySwiper', {
@@ -55,4 +56,17 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { threshold: 0.15 });
 
   document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".timeline-item");
+  function reveal() {
+    const trigger = window.innerHeight * 0.85;
+    items.forEach(item => {
+      if (item.getBoundingClientRect().top < trigger) {
+        item.classList.add("visible");
+      }
+    });
+  }
+  window.addEventListener("scroll", reveal);
+  reveal();
 });

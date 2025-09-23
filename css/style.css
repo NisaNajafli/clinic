@@ -582,6 +582,9 @@ main{
   position: absolute;
   z-index: 200;
 }
+#main-button .icon-close { display: none; }
+#main-button.open .icon-mail { display: none; }
+#main-button.open .icon-close { display: block; }
 
 @keyframes wave {
   0%   {box-shadow: 0 0 0 0 rgba(79,172,254,0.4);}
@@ -967,6 +970,108 @@ main{
   border: 1px solid rgba(16,95,112,0.15);
   box-shadow: 0 8px 25px rgba(0,0,0,0.06);
 }
+
+.get-recipe {
+  padding: 40px 0;
+}
+
+.get-recipe-content h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--darkblue);
+  margin-bottom: 50px;
+  position: relative;
+}
+
+
+.get-recipe-text {
+  display: grid;
+  grid-template-columns: 50% auto;
+  gap: 60px;
+  align-items: center;
+  margin:auto;
+}
+
+.get-recipe-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: var(--b-radius);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  opacity: 0;
+  transform: translateY(40px);
+  animation: cardFade 1s ease forwards 0.5s;
+}
+@keyframes cardFade {
+  to { opacity: 1; transform: translateY(0); }
+}
+.get-recipe-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.get-recipe-steps {
+  margin: 25px 0;
+  padding-left: 20px;
+  list-style: none;
+  counter-reset: step;
+}
+.get-recipe-steps li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 25px;
+  font-size: 16px;
+  line-height: 1.7;
+  text-align: justify;
+  color: #444;
+}
+.get-recipe-steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg,#1b94af,#1d3e6f);
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 36px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.get-recipe-image {
+  position: relative;
+  border-radius: 20px;
+}
+.get-recipe-image img {
+  width: 100%;
+  display: block;
+  border-radius: var(--b-radius);
+}
+
+
+@media (max-width: 992px) {
+  .get-recipe-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .get-recipe-card { padding: 40px 25px; }
+  .get-recipe-steps li { padding-left: 0; }
+  .get-recipe-steps li::before {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .get-recipe-title h2 { font-size: 32px; }
+}
+
 
 /* SECTION */
 .onfooter__section {
@@ -3131,6 +3236,355 @@ footer hr {
   to{opacity:1;transform:translateY(0);}
 }
 
+.medical-certificates-section {
+  background: linear-gradient(
+      rgba(255,255,255,0.8),
+      rgba(255,255,255,0.8)
+    );
+
+  padding: 80px 0;
+  color: #333;
+  position: relative;
+}
+
+.certificates-content {
+  display: grid;
+  grid-template-columns: 40% auto;
+  gap: 50px;
+  align-items: center;
+}
+
+.certificates-image img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  transition: transform .6s ease, box-shadow .6s ease;
+}
+.certificates-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+}
+
+.certificates-text h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--darkblue);
+  margin-bottom: 25px;
+}
+.certificates-text p {
+  font-size: 16px;
+  margin-bottom: 0;
+  text-align: justify;
+}
+
+
+
+.difficulties-section {
+  background-color: #f3f6fb;
+  padding: 100px 0;
+}
+
+.difficulties-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--darkblue);
+  margin-bottom: 50px;
+}
+
+
+.difficulties-intro, .difficulties-outro {
+  max-width: 950px;
+  margin: 0 auto 50px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  text-align: justify;
+}
+
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto 70px;
+  padding: 20px 0;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--darkblue), var(--accent));
+  border-radius: 3px;
+  box-shadow: 0 0 20px rgba(27,148,175,0.4);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 30px;
+  background: #fff;
+  border-radius: var(--b-radius);
+  box-shadow:0 10px 30px 10px rgba(0,0,0,0.1);
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: #444;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all .6s ease;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 4px solid var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #fff;
+}
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+.timeline-item:nth-child(odd)::before {
+  right: -13px;
+}
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+.timeline-item:nth-child(even)::before {
+  left: -13px;
+}
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.advantages-section {
+  padding: 40px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--darkblue);              
+  margin-bottom: 30px;
+}
+
+.advantages-layout {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: var(--b-radius);
+  box-shadow:0 18px 35px rgba(0,0,0,.15);
+  padding: 40px 30px;
+}
+
+.advantages-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+.advantages-list {
+  list-style: none;           
+  margin: 30px 0;
+  padding: 0;
+}
+.advantages-list li {
+  position: relative;
+  padding-left: 34px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+.advantages-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #1b94af;             
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.cert-types-section {
+  background: #f5f8fb;
+  padding: 50px 0;
+
+}
+
+
+.section-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--darkblue);
+  margin-bottom: 30px;
+}
+
+.cert-intro,
+.cert-outro {
+  max-width: 950px;
+  margin:20px auto;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  text-align: justify;
+}
+
+
+.ribbon-list {
+  max-width: 1000px;
+  margin:auto;
+  padding-left: 40px;
+}
+
+.ribbon-item {
+  margin-bottom: 40px;
+  padding-left: 30px;
+  border-left: 4px solid transparent; 
+  animation: fade-slide 1s ease forwards;
+  opacity: 0;
+  transform: translateY(40px);
+}
+.ribbon-item:nth-child(odd) { animation-delay: 0.2s; }
+.ribbon-item:nth-child(even){ animation-delay: 0.4s; }
+
+@keyframes fade-slide {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ribbon-item p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+  margin: 0;
+  padding: 15px 20px;
+  background: #fff;
+  box-shadow: 0 6px 16px 6px rgba(0,0,0,0.08);
+  border-radius: 12px;
+  transition: box-shadow .3s ease;
+}
+.ribbon-item p:hover {
+  box-shadow: 0 10px 28px rgba(0,0,0,0.15);
+}
+.certificates-faq {
+  padding: 30px 0;
+}
+
+.certificates-faq .section-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--darkblue);
+  margin-bottom: 30px;
+}
+
+.certificates-faq .faq {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.certificates-faq .faq-toggle {
+  display: none;
+}
+
+.certificates-faq .faq-question {
+  display: block;
+  padding: 20px 25px;
+  margin-bottom: 10px;
+  background: #fff;
+  color: var(--darkblue);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  position: relative;
+  transition: background .3s ease, box-shadow .3s ease;
+}
+.certificates-faq .faq-question::after {
+  content: "+";
+  position: absolute;
+  right: 25px;
+  font-size: 26px;
+  transition: transform .3s ease;
+}
+.certificates-faq .faq-toggle:checked + .faq-question::after {
+  transform: rotate(45deg);
+}
+.certificates-faq .faq-question:hover {
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.certificates-faq .faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  margin-bottom: 20px;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+  padding: 0 25px;
+}
+.certificates-faq .faq-toggle:checked + .faq-question + .faq-answer {
+  max-height: 600px;
+  padding: 20px 25px;
+}
+
+.certificates-faq .faq-answer p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #444;
+  margin: 0;
+}
+
+@media (max-width:768px){
+  .certificates-faq .section-title { font-size: 32px; }
+  .certificates-faq .faq-question { font-size: 18px; }
+  .certificates-faq .faq-answer p { font-size: 17px; }
+}
+
+
+
+@media (max-width:768px) {
+  .section-title { font-size: 28px; }
+  .advantages-text p, .advantages-list li { font-size: 17px; }
+}
+
+
+@media (max-width: 768px) {
+  .timeline::before { left: 8px; transform: none; }
+  .timeline-item {
+    width: 100%;
+    padding-left: 50px;
+    text-align: left !important;
+  }
+  .timeline-item::before {
+    left: 10px !important;
+    right: auto !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .certificates-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .certificates-image { order: -1; }
+}
 
 @media(max-width:576px){
   .br-title{font-size:26px;}
