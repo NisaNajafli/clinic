@@ -71,3 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
   reveal();
 });
 document.getElementById('year').textContent = new Date().getFullYear();
+const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})

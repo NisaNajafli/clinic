@@ -12,16 +12,59 @@
 </head>
 <body>
 <header>
+    <div class="modal fade" id="clinicModalLabel" tabindex="-1"
+          aria-labelledby="clinicModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                      aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4 premium-form">
+              <form>
+                <div class="mb-4">
+                  <label for="name" class="form-label fw-semibold">
+                    <i class="bi bi-person me-2"></i>Имя
+                  </label>
+                  <input type="text" class="form-control form-control-lg shadow-sm"
+                        id="name" placeholder="Введите ваше имя">
+                </div>
+
+                <div class="mb-4">
+                  <label for="phone" class="form-label fw-semibold">
+                    <i class="bi bi-telephone me-2"></i>Номер телефона
+                  </label>
+                  <input type="tel" class="form-control form-control-lg shadow-sm"
+                        id="phone" placeholder="Введите номер телефона">
+                </div>
+
+                <div class="mb-4">
+                  <label for="notes" class="form-label fw-semibold">
+                    <i class="bi bi-chat-text me-2"></i>Примечания
+                  </label>
+                  <textarea class="form-control form-control-lg shadow-sm"
+                            id="notes" rows="3" placeholder="Добавьте примечания"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-accent w-100 py-3 mt-3">
+                  Отправить
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
   <div class="header-top">
     <div class="header-top-content container">
-      <a class="onlineregistration" href="">
+      <a class="onlineregistration" href=""
+         data-bs-toggle="modal"
+          data-bs-target="#clinicModalLabel">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512" fill="#fff">
           <path d="M452 40h-24V0h-40v40H124V0H84v40H60C26.916 40 0 66.916 0 100v352c0 33.084 26.916 60 60 60h392c33.084 0 60-26.916 60-60V100c0-33.084-26.916-60-60-60zm20 412c0 11.028-8.972 20-20 20H60c-11.028 0-20-8.972-20-20V188h432v264zm0-304H40v-48c0-11.028 8.972-20 20-20h24v40h40V80h264v40h40V80h24c11.028 0 20 8.972 20 20v48z"/>
           <path d="M76 230h40v40H76zM156 230h40v40h-40zM236 230h40v40h-40zM316 230h40v40h-40zM396 230h40v40h-40zM76 310h40v40H76zM156 310h40v40h-40zM236 310h40v40h-40zM316 310h40v40h-40zM76 390h40v40H76zM156 390h40v40h-40zM236 390h40v40h-40zM316 390h40v40h-40zM396 310h40v40h-40z"/>
         </svg>
         Онлайн-запись
       </a>
-
       <div class="header-top-right">
         <a href="">
           <svg
@@ -43,20 +86,19 @@
     <nav>
       <div id="logo">
         <a href="index.html"><img src="img/logo1.webp" alt=""></a>
-        <!-- <h3>Медрецепты</h3> -->
       </div>
 
       <div class="nav-menu">
         <ul>
           <li><a href="list.html">Больничный лист</a></li>
           <li><a href="certificates.html">Справки</a></li>
-          <li><a href="recipes.html">Рецепты</a></li>
+          <li><a href="prescriptions.html">Рецепты</a></li>
           <li><a href="fakedocument.html">Подлинные документы</a></li>
           <li><a href="contact.html">Контакты</a></li>
         </ul>
       </div>
 
-      <a id="nav-button" href="#" class="btn btn2 d-none d-lg-flex">Оставить Заявку</a>
+      <a id="nav-button" data-bs-toggle="modal" data-bs-target="#clinicModalLabel" href="#" class="btn btn2 d-none d-lg-flex">Оставить Заявку</a>
 
       <button class="menu-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileOffcanvasTop" aria-controls="mobileOffcanvasTop">
         <svg class="icon-hamburger" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" viewBox="0 0 16 16"><path d="M1.5 12.5h13v-1h-13v1zm0-4h13v-1h-13v1zm0-5v1h13v-1h-13z"/></svg>
@@ -94,15 +136,18 @@
       <ul class="list-unstyled">
         <li><a href="list.html">Больничный лист</a></li>
         <li><a href="certificates.html">Справки</a></li>
-        <li><a href="recipes.html">Рецепты</a></li>
+        <li><a href="prescriptions.html">Рецепты</a></li>
         <li><a href="fakedocument.html">Подлинные документы</a></li>
         <li><a href="contact.html">Контакты</a></li>
       </ul>
-      <a  href="#" id="canvasbtn" class=" btn btn2">Оставить Заявку</a>
+      <a  href="#" id="canvasbtn" class=" btn btn2"
+      data-bs-toggle="modal"
+      data-bs-target="#clinicModalLabel">Оставить Заявку</a>
     </div>
   </div>
     </div>
 <main>
+
   <div class="wrapper">
       <div id="main-div">
         <div id="main-button" class="wave">
@@ -118,7 +163,9 @@
            
         </div>
 
-        <a href="#" id="wrapperdown" class="onlineregistration"> 
+        <a href="#" id="wrapperdown" class="onlineregistration"
+        data-bs-toggle="modal"
+        data-bs-target="#clinicModalLabel"> 
           <svg
          xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M452 40h-24V0h-40v40H124V0H84v40H60C26.916 40 0 66.916 0 100v352c0 33.084 26.916 60 60 60h392c33.084 0 60-26.916 60-60V100c0-33.084-26.916-60-60-60zm20 412c0 11.028-8.972 20-20 20H60c-11.028 0-20-8.972-20-20V188h432v264zm0-304H40v-48c0-11.028 8.972-20 20-20h24v40h40V80h264v40h40V80h24c11.028 0 20 8.972 20 20v48z" fill="#fff" opacity="1" data-original="#fff" class=""></path><path d="M76 230h40v40H76zM156 230h40v40h-40zM236 230h40v40h-40zM316 230h40v40h-40zM396 230h40v40h-40zM76 310h40v40H76zM156 310h40v40h-40zM236 310h40v40h-40zM316 310h40v40h-40zM76 390h40v40H76zM156 390h40v40h-40zM236 390h40v40h-40zM316 390h40v40h-40zM396 310h40v40h-40z" fill="#fff" opacity="1" data-original="#fff" class=""></path></g>
         </svg>
@@ -151,7 +198,6 @@
         </a>
       </div>
   </div>
-
 
   <div class="breadcrumb container">
     <a class="titlebreadcrumb" href="index.html">Главная</a>
@@ -204,52 +250,16 @@
       </div>
       <div class="onfooter-modals">
         <div class="modal1">
-          <button type="button" class="premium-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            Онлайн-запись
+          <button type="button" class="premium-btn" data-bs-toggle="modal"data-bs-target="#clinicModalLabel">
+            Оставить Заявку
           </button>
-
-          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  ...
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Understood</button>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="modal2">
-          <!-- Button trigger modal -->
-          <button type="button" class="premium-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          <button type="button" class="premium-btn" data-bs-toggle="modal"
+          data-bs-target="#clinicModalLabel">
             Онлайн-запись
           </button>
 
-          <!-- Modal -->
-          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  ...
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Understood</button>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -288,7 +298,9 @@
         </a>
       </div>
       <div class="footer-registration">
-        <a href="">
+        <a href=""
+        data-bs-toggle="modal"
+          data-bs-target="#clinicModalLabel" >
           <svg
            xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="33" height="33" x="0" y="0" viewBox="0 0 100 100" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M84.234 78.581C82.22 72.587 74.193 68.835 68.47 66.32c-2.242-.982-8.449-2.648-9.195-5.471-.267-1.017-.231-1.976-.012-2.895a5.596 5.596 0 0 1-1.057.105h-3.729a5.402 5.402 0 0 1-5.396-5.397c0-2.973 2.42-5.39 5.396-5.39h3.729c1.232 0 2.4.417 3.342 1.161a23.997 23.997 0 0 0 3.955-.866c1.631-3.417 2.903-7.503 3.188-11.02 1.217-15.048-8.008-23.852-21.235-22.33-9.617 1.107-15.362 8.278-15.983 17.51-.628 9.41 2.861 16.36 6.567 21.458 1.623 2.229 3.328 3.662 3.066 6.348-.304 3.176-3.7 4.061-6.129 5.037-2.878 1.156-5.978 2.91-7.442 3.721-5.043 2.785-10.578 6.139-11.822 10.727-2.755 10.168 6.549 13.248 14.23 14.67C36.535 94.904 43.968 95 50.082 95c11.059 0 30.945-.443 34.152-8.756.912-2.359.521-6.118 0-7.663z" fill="#000000" opacity="1" data-original="#000000" class=""></path><path d="M60.566 51.143a2.818 2.818 0 0 0-2.358-1.283h-3.729a2.81 2.81 0 1 0 0 5.618h3.729a2.786 2.786 0 0 0 2.479-1.519c5.199-.409 9.721-1.997 12.895-4.342.729.47 1.591.745 2.521.745h.234a4.687 4.687 0 0 0 4.688-4.693v-9.368a4.673 4.673 0 0 0-2.672-4.224C77.665 17.034 65.212 5 50 5S22.333 17.034 21.648 32.077a4.67 4.67 0 0 0-2.674 4.224v9.368a4.687 4.687 0 0 0 4.684 4.693h.237a4.688 4.688 0 0 0 4.687-4.693v-9.368a4.677 4.677 0 0 0-2.608-4.192C26.643 19.434 37.161 9.331 50 9.331c12.834 0 23.357 10.103 24.023 22.778a4.68 4.68 0 0 0-2.605 4.192v9.368c0 .622.121 1.201.334 1.742-2.732 1.955-6.709 3.348-11.186 3.732z" fill="#000000" opacity="1" data-original="#000000" class=""></path></g>
           </svg>
@@ -345,3 +357,4 @@
 <script src="main.js"></script>
 </body>
 </html>
+

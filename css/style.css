@@ -8,6 +8,38 @@
  * {
   font-family: "Montserrat", sans-serif !important;
  }
+ h2{
+  margin-bottom: 30px;
+  color: var(--darkblue) !important;
+  font-weight: 700
+ }
+.premium-form {
+  background: #fff;
+  border-radius: 1rem;
+}
+
+.premium-form .form-control {
+  border: 2px solid #e6e9ef;
+  border-radius: 0.75rem;
+  transition: border-color .3s ease, box-shadow .3s ease;
+}
+
+.premium-form .form-control:focus {
+  border-color: var(--accent, #1b94af);
+  box-shadow: 0 0 0 0.25rem rgba(27,148,175,0.25);
+}
+
+.btn-accent {
+  background: var(--accent, #1b94af);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  transition: background .3s ease, transform .3s ease;
+}
+.btn-accent:hover {
+  background: #15859b;
+  transform: translateY(-2px);
+}
 
 header {
   background: #fff;
@@ -98,8 +130,9 @@ hr {
   width: 100%;
 }
 .offcanvas.offcanvas-top{
-    top: 12%;
+    top: 10%;
     height: 50vh;  
+    margin-top: 17px;
     overflow-y: auto;
 }
 .offcanvas-header {
@@ -304,6 +337,9 @@ h1 {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+}
+.actions .btn{
+  width: 60%;
 }
 .btn {
   align-items: center;
@@ -600,7 +636,7 @@ main{
   padding: 40px 0;
   height: 100%;
 }
-.about__section h3{
+.about__section h2{
   text-align: center;
   font: 700 30px Montserrat;
   color: #333;
@@ -763,7 +799,6 @@ main{
 .prescription-section-top h2 {
   font: 700 30px Montserrat;
   color: #333;
-  margin-bottom: 40px;
   position: relative;
 }
 
@@ -907,7 +942,6 @@ main{
   text-align: center;
   font: 700 30px "Montserrat", sans-serif;
   color: #333;
-  margin-bottom: 70px;
   position: relative;
   letter-spacing: 1px;
 }
@@ -980,7 +1014,6 @@ main{
   font-weight: 700;
   font-size: 30px;
   color: var(--darkblue);
-  margin-bottom: 50px;
   position: relative;
 }
 
@@ -1058,10 +1091,18 @@ main{
 
 
 @media (max-width: 992px) {
-  .get-recipe-content {
+  .get-recipe-text {
     grid-template-columns: 1fr;
     text-align: center;
   }
+  .get-recipe-image{
+    width: 70%;
+    margin: auto;
+  }
+  .get-recipe-steps{
+    margin: 0;
+  }
+
   .get-recipe-card { padding: 40px 25px; }
   .get-recipe-steps li { padding-left: 0; }
   .get-recipe-steps li::before {
@@ -1369,13 +1410,12 @@ footer hr {
 }
 .footer-menu {
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  gap: 40px;
+  grid-template-columns:1fr;
 }
 .footer-menu div {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+
 }
 
 
@@ -1552,7 +1592,6 @@ footer hr {
 .contact__section h2{
   font: 700 30px Montserrat;
   color: #333;
-  margin-bottom: 40px;
   text-align: center;
   position: relative;
 }
@@ -1661,7 +1700,6 @@ footer hr {
 
 .online-sicknote__section {
   padding: 60px 0;
-  font-family: "Montserrat", sans-serif;
   margin-bottom: 40px;
 }
 .sicknote-content1 {
@@ -1673,7 +1711,6 @@ footer hr {
   font-size: 30px;
   font-weight: 700;
   color: var(--darkblue);
-  margin-bottom: 20px;
 }
 .sicknote-text p {
   font-size: 16px;
@@ -1703,7 +1740,6 @@ footer hr {
   font-weight: 700;
   color: var(--darkblue);
   text-align: center;
-  margin-bottom: 20px;
 }
 .official-sicknote .desc {
   text-align: center;
@@ -1757,8 +1793,7 @@ footer hr {
 }
 
 .how-it-works {
-  padding: 70px 0;
-  font-family: "Montserrat", sans-serif;
+  padding: 70px 0; 
   margin-bottom: 40px;
 }
 
@@ -1766,22 +1801,25 @@ footer hr {
   font-size: 30px;
   color: var(--darkblue);
   font-weight: 700;
-  text-align: start;
-  margin-bottom: 25px;
+  text-align: center;
   position: relative;
 }
 
-
-
 .hiw-content {
   display: flex;
-  align-items:center;
+  flex-direction: column;
   gap: 50px;
 }
-.hiw-content{
+.hiw-text{
   flex: 0 0 50%;
 }
-.hiw-text p {
+
+.hiw-text-img{
+  display: flex;
+  gap: 20px;
+  align-items:center
+}
+.hiw-content p {
   margin-bottom: 15px;
   color: #333;
   font-size: 16px;
@@ -1792,13 +1830,12 @@ footer hr {
 .hiw-list {
   list-style: none;
   padding-left: 0;
-  margin-bottom: 20px;
 }
 
 .hiw-list li {
   position: relative;
   padding-left: 35px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-size: 16px;
   color: #1d3e6f;
   font-weight: 500;
@@ -1813,7 +1850,6 @@ footer hr {
 }
 .hiw-image{
   flex: 0 0 50%;
-
 }
 
 .hiw-image img {
@@ -1836,7 +1872,6 @@ footer hr {
   font-size:30px;
   color:var(--darkblue);
   letter-spacing:.2px;
-  margin-bottom:16px;
   font-weight: 700;
 }
 
@@ -1966,7 +2001,6 @@ footer hr {
   font-size: 30px;
   color: var(--darkblue);
   font-weight: 700;
-  margin-bottom: 20px;
 }
 
 .faq-intro p {
@@ -2049,7 +2083,6 @@ footer hr {
 .docs-moskva h2 {
   font-size: 30px;
   color: var(--darkblue);
-  margin-bottom: 30px;
   font-weight: 700;
   line-height: 1.25;
   position: relative;
@@ -2145,7 +2178,6 @@ footer hr {
   font-size:30px;
   color:var(--darkblue);
   font-weight: 700;
-  margin-bottom:20px;
 }
 
 
@@ -2735,7 +2767,7 @@ footer hr {
   max-width:1100px;
   margin:0 auto;
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(320px,1fr));
+  grid-template-columns: 1fr 1fr;
   gap:40px;
 }
 
@@ -3371,7 +3403,6 @@ footer hr {
   font-size: 30px;
   font-weight: 700;
   color: var(--darkblue);
-  margin-bottom: 25px;
 }
 .certificates-text p {
   font-size: 16px;
@@ -3381,7 +3412,7 @@ footer hr {
 
 
 
-.difficulties-section {
+/* .difficulties-section {
   background-color: #f3f6fb;
   padding: 100px 0;
 }
@@ -3468,7 +3499,113 @@ footer hr {
   opacity: 1;
   transform: translateY(0);
 }
+ */
+.difficulties-section {
+  background-color: #f3f6fb;
+  padding: 100px 0;
+}
 
+.difficulties-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--darkblue);
+  margin-bottom: 50px;
+}
+
+.difficulties-intro,
+.difficulties-outro {
+  max-width: 950px;
+  margin: 0 auto 50px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  text-align: justify;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto 70px;
+  padding: 20px 0;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--darkblue), var(--accent));
+  border-radius: 3px;
+  box-shadow: 0 0 20px rgba(27,148,175,0.4);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 30px;
+  background: #fff;
+  border-radius: var(--b-radius);
+  box-shadow:0 10px 30px 10px rgba(0,0,0,0.1);
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: #444;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all .6s ease;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 4px solid var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #fff;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+.timeline-item:nth-child(odd)::before {
+  right: -13px;
+}
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+.timeline-item:nth-child(even)::before {
+  left: -13px;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- RESPONSIVE FIX ---------- */
+@media (max-width: 992px) {
+  .timeline::before {
+    left: 20px;
+    transform: none;
+  }
+  .timeline-item {
+    width: 100%;
+    text-align: left;
+    padding-left: 60px;
+    left: 0 !important;   /* override odd/even */
+  }
+  .timeline-item::before {
+    left: 20px;
+    right: auto;
+  }
+}
 
 .advantages-section {
   padding: 40px 0;
@@ -3550,12 +3687,10 @@ footer hr {
 .ribbon-list {
   max-width: 1000px;
   margin:auto;
-  padding-left: 40px;
 }
 
 .ribbon-item {
   margin-bottom: 40px;
-  padding-left: 30px;
   border-left: 4px solid transparent; 
   animation: fade-slide 1s ease forwards;
   opacity: 0;
@@ -3850,7 +3985,23 @@ footer hr {
     margin-top: 30px;
     text-align: center;
   }
-  
+  .sicknote-content1  {flex-direction: column;}
+  .hiw-text-img{
+    flex-direction: column;
+  }
+  .hiw-content{
+    gap: 0;
+  }
+  h2{
+    text-align: center;
+  }
+  .recipes-cards{
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+  .pp-hero{
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -3873,9 +4024,12 @@ footer hr {
   .premium-btn{
     font-size: 8px;
   }
-   .sicknote-content1  {flex-direction: column;}
    .faq-intro h2 { font-size: 28px; }
   .faq-intro p  { font-size: 16px; }
+  .mb-img{
+    width: 90%;
+    margin: auto;
+  }
 }
 
 @media (max-width: 510px){
@@ -3900,7 +4054,7 @@ footer hr {
     font-size: 15px;
   }
   .text-content h4{
-    font-size: 22px;
+    font-size: 19px;
   }
   .prescription-section-content p{
     font-size: 13px;
@@ -3935,7 +4089,18 @@ footer hr {
   .premium-btn{
     padding: 14px 12px;
   }
-  
+  .service-item {
+    gap: 0;
+  }
+  h2{
+    font-size: 24px !important;
+  }
+  .faq-content .accordion-item{
+    width: 100%;
+  }
+  .breadcrumb{
+    font-size: 19px;
+  }
 }
 
 @media (max-width: 900px) {
