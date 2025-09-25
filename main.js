@@ -70,3 +70,4 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", reveal);
   reveal();
 });
+document.getElementById('year').textContent = new Date().getFullYear();
