@@ -17,7 +17,9 @@
   background: #fff;
   border-radius: 1rem;
 }
-
+.modal button{
+  font-size: 18px !important;
+}
 .premium-form .form-control {
   border: 2px solid #e6e9ef;
   border-radius: 0.75rem;
@@ -40,6 +42,12 @@
   background: #15859b;
   transform: translateY(-2px);
 }
+.modal-backdrop {
+    z-index: 10000 !important; /* 9999-dan böyük olmalıdır */
+}
+.modal {
+    z-index: 10001 !important; /* backdrop-dan bir pillə böyük qalır ki, form özü də kliklənə bilsin */
+}
 
 header {
   background: #fff;
@@ -47,13 +55,14 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 99999;
+  z-index: 9999;
+  border-bottom: 1px solid #3333337c
 }
 header.scrolled {
     box-shadow: 10px -6px 15px black;
 }
 nav {
-  padding: 20px 0;
+  padding: 10px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -106,6 +115,7 @@ hr {
 #nav-button {
   display: none;
   width: 15%;
+  font-size: 14px !important;
 }
 .menu-btn {
   border: none;
@@ -129,8 +139,11 @@ hr {
   height: 100%;
   width: 100%;
 }
+.offcanvas-body{
+  padding: 30px 0;
+}
 .offcanvas.offcanvas-top{
-    top: 10%;
+    top: 6%;
     height: 50vh;  
     margin-top: 17px;
     overflow-y: auto;
@@ -200,6 +213,7 @@ hr {
   display: flex;
   justify-content: space-between;
 }
+
 
 .onlineregistration{
   text-decoration: none;
@@ -290,8 +304,7 @@ hr {
   --ring: rgba(32, 59, 108, 0.12);
   isolation: isolate;
   padding: 40px 0;
-  padding-bottom: clamp(28px, 6vw, 64px);
-  margin-top: 126px;
+  margin-top: 140px;
 }
 
 .hero-inner {
@@ -333,6 +346,9 @@ h1 {
   font-size: clamp(15px, 2.2vw, 18px);
   line-height: 1.6;
 }
+#banner-button{
+  font-size: 18px !important;
+}
 .actions {
   display: flex;
   gap: 12px;
@@ -352,7 +368,7 @@ h1 {
   padding: 12px 18px;
   border-radius: var(--real-border-radius);
   border: 1px solid rgba(10, 20, 40, 0.12);
-  color: #fff;
+  color: #fff !important;
   font-weight: 700;
   text-decoration: none;
   transition: transform 0.15s, box-shadow 0.15s, background-color 0.2s;
@@ -1226,11 +1242,9 @@ main{
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 60px;
-  padding: 80px;
+  padding: 40px;
+  gap: 20px;
   border-radius: 24px;
-
-  /* yalnız content üçün premium bg */
   background-color: var(--accent);
   box-shadow: 0 12px 40px rgba(0,0,0,0.3);
   color: #fff;
@@ -1239,8 +1253,8 @@ main{
 
 .onfooter-img {
   position: absolute;
-  left: 8%;
-  bottom: -2%;
+  left: 4%;
+  bottom: 0%;
 
 }
 .onfooter__section-content img {
@@ -1253,10 +1267,10 @@ main{
 }
 
 .onfooter-texts {
-  width: 30%;
+  width: 50%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 10px;
 }
 .onfooter-texts h5 {
   font: 600 28px 'Montserrat', sans-serif;
@@ -1264,34 +1278,36 @@ main{
 .onfooter-texts p {
   font: 400 16px 'Montserrat', sans-serif;
   line-height: 1.6;
-  width: 85%;
 }
 
-.onfooter-modals {
-  width: 30%;
+.onfooter-socials {
   display: flex;
   flex-direction: column;
-  align-items:flex-end;
   gap: 30px;
 }
 
-/* PREMIUM BUTTON */
-.premium-btn {
+.onfooter-social {
   background: #ffffff;
-  color: #135f70; /* məzmunla uyğun kontrast rəng */
-  padding: 14px 28px;
+  color: #135f70;
+  /* height: 50px;
+  width: 100%; */
+  padding: 15px 30px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
   border: none;
-  border-radius: 50px;
-  font: 600 16px 'Montserrat', sans-serif;
+  border-radius: var(--b-radius);
+  font-size: 16px;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .5px;
   transition: all 0.3s ease;
   box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
 
-.premium-btn:hover {
-  background: #f0f0f0; /* hover zamanı azca tündləşir */
-  color: #0c3a45;      /* hover zamanı mətn bir az tündləşir */
+.onfooter-social:hover {
+  background: #f0f0f0; 
+  color: #0c3a45;    
   transform: translateY(-2px);
   box-shadow: 0 8px 18px rgba(0,0,0,0.35);
 }
@@ -1301,34 +1317,10 @@ main{
   font-size: 14px;
 }
 
-/* CUSTOM MODAL */
-.custom-modal .modal-content {
-  border: none;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(15px);
-  color: #fff;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-.custom-modal .modal-header,
-.custom-modal .modal-footer {
-  border: none;
-}
-.custom-modal .modal-title {
-  font: 600 22px 'Montserrat', sans-serif;
-}
-.custom-modal .btn-close {
-  filter: invert(1);
-}
-.custom-modal .modal-body p {
-  font: 400 16px 'Montserrat', sans-serif;
-  line-height: 1.5;
-}
-
 footer {
   background: #fff;
   color: var(--darkblue);
-  padding: 60px 0 30px;
+  padding: 30px 0;
   box-shadow: 0 -5px 20px rgba(0,0,0,0.05);
   position: relative;
   z-index: 1;
@@ -1480,12 +1472,13 @@ footer hr {
 }
 
 .footer-bottom {
-  padding: 20px 0;
   text-align: center;
+  
 }
 .footer-bottom p{
   color: #333;
-  font: 500 13px Montserrat
+  font: 500 13px Montserrat;
+  margin: 0;
 }
 
 
@@ -1700,7 +1693,7 @@ footer hr {
 
 .online-sicknote__section {
   padding: 60px 0;
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
 }
 .sicknote-content1 {
   display: flex;
@@ -1733,7 +1726,7 @@ footer hr {
   background: linear-gradient(to right, #f9fafc, #eef3f8);
   padding: 60px 0;
   font-family: "Montserrat", sans-serif;
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
 }
 .official-sicknote h2 {
   font-size: 30px;
@@ -1793,8 +1786,8 @@ footer hr {
 }
 
 .how-it-works {
-  padding: 70px 0; 
-  margin-bottom: 40px;
+  padding: 60px 0; 
+  /*margin-bottom: 40px;*/
 }
 
 .how-it-works h2 {
@@ -1861,9 +1854,9 @@ footer hr {
 }
 
 .eln-types{
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
   background: linear-gradient(135deg,var(--bg1),var(--bg2));
-  padding:72px 0;
+  padding:60px 0;
   font-family: "Montserrat", system-ui, sans-serif;
 }
 
@@ -1987,7 +1980,7 @@ footer hr {
 
 .faq__section {
   background: linear-gradient(135deg, #f9fafc, #eef3f8);
-  padding: 80px 0;
+  padding: 60px 0;
   margin-bottom: 40px;
 }
 
@@ -2062,7 +2055,7 @@ footer hr {
   --secondary:#1b94af;
   padding: 90px 0;
   font-family: "Montserrat", sans-serif;
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
 }
 .docs-moskva-content{
   display: flex;
@@ -2154,7 +2147,7 @@ footer hr {
   --accent:#1d3e6f;
   --secondary:#1b94af;
   --glass-bg:rgba(255,255,255,0.25);
-  padding:100px 0;
+  padding:60px 0;
   font-family:"Montserrat",sans-serif;
   position:relative;
 }
@@ -2245,7 +2238,7 @@ footer hr {
 .license-types{
   background:#fff;
   padding:80px 0;
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
 }
 .license-types-content{
   display: flex;
@@ -2267,7 +2260,7 @@ footer hr {
   grid-template-columns:1fr 1fr;
   gap:60px;
   align-items:start;
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
 }
 .lt-bottomtext{
   display: flex;
@@ -2356,10 +2349,10 @@ footer hr {
 
 .license-process{
   position:relative;
-  padding:90px 0;
+  padding:60px 0;
   background:#fff;
   overflow:hidden;
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
 }
 .license-process::before{
   content:"";
@@ -2481,7 +2474,7 @@ footer hr {
 .med-books{
   background:#fff;
   padding:80px 0;
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
 }
 
 .mb-title{
@@ -2557,8 +2550,8 @@ footer hr {
 
 .medcard-section{
   background:#fff;
-  padding:80px 0;
-  margin-bottom: 40px;
+  padding:60px 0;
+  /*margin-bottom: 40px;*/
 }
 
 
@@ -2625,7 +2618,7 @@ footer hr {
 
 .buy-medcard{
   background:#fff;
-  padding:80px 0;
+  padding:60px 0;
 }
 
 
@@ -2706,8 +2699,8 @@ footer hr {
 
 .advantages{
   background:#fff;
-  padding:80px 0;
-  margin-bottom: 40px;
+  padding:60px 0;
+  /*margin-bottom: 40px;*/
 }
 
 .adv-title{
@@ -2825,7 +2818,7 @@ footer hr {
 .pharmacy-prescription{
   background:#fff;
   padding:40px 0;
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
 }
 
 .pp-title{
@@ -3466,11 +3459,11 @@ footer hr {
   line-height: 1.5;
   text-align: center;
   color: #444;
-  margin-bottom: 40px;
-  opacity: 0;
+  /*margin-bottom: 40px;*/
+  /* opacity: 0;
   transform: translateY(50px);
   transition: all .6s ease;
-}
+} */
 .timeline-item::before {
   content: "";
   position: absolute;
@@ -3553,7 +3546,7 @@ footer hr {
   line-height: 1.5;
   text-align: center;
   color: #444;
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
   opacity: 0;
   transform: translateY(50px);
   transition: all .6s ease;
@@ -3690,7 +3683,7 @@ footer hr {
 }
 
 .ribbon-item {
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
   border-left: 4px solid transparent; 
   animation: fade-slide 1s ease forwards;
   opacity: 0;
@@ -3965,15 +3958,23 @@ footer hr {
     display: none;
   }
   .onfooter__section-content{
-    justify-content: space-between;
+    flex-direction: column;
     width: 100%;
   }
 
-  .onfooter-modals{
+  .onfooter-texts p{
+    font-size: 19px;
+  }
+  .onfooter-socials{
+    width: 100%;
+  }
+  .onfooter-social{
     width: 50%;
+    margin: auto;
   }
   .onfooter-texts{
-    width: 50%;
+    width: 100%;
+    text-align: center;
   }
   .sicknote-cards {
     grid-template-columns: 1fr;
@@ -4002,6 +4003,9 @@ footer hr {
   .pp-hero{
     width: 100%;
   }
+  .breadcrumb{
+    margin-top: 140px !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -4018,7 +4022,7 @@ footer hr {
     gap: 40px;
   }
   .onfooter-texts p{
-    font-size: 10px;
+    font-size: 16px;
     width: 100%;
   }
   .premium-btn{
@@ -4029,6 +4033,9 @@ footer hr {
   .mb-img{
     width: 90%;
     margin: auto;
+  }
+  body{
+    padding: 0 10px;
   }
 }
 
@@ -4074,20 +4081,8 @@ footer hr {
   .footer-top p, .footer-top a{
     font-size: 14px;
   }
-  .onfooter-texts h5{
-    font-size: 21px;
-  }
   .onfooter__section-content{
     padding: 80px 20px;
-  }
-  .onfooter-texts h5{
-    font-size: 17px;
-  }
-  .onfooter-texts p{
-    font-size: 8px;
-  }
-  .premium-btn{
-    padding: 14px 12px;
   }
   .service-item {
     gap: 0;
@@ -4121,7 +4116,7 @@ footer hr {
         padding: 12px 18px;
         border-radius: var(--real-border-radius);
         text-decoration: none;
-        color: #fff;
+        color: #fff !important;
         border: 1px solid rgba(255, 255, 255, 0.14);
         box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28),
           inset 0 1px 0 rgba(255, 255, 255, 0.12);
@@ -4130,9 +4125,10 @@ footer hr {
           border-color 0.2s ease;
         font-size: 11px;
         font-weight: 600;
+
       }
       .btn:hover {
-        color: #fff;
+        color: #fff !important;
         transform: translateY(-2px);
         box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35);
         border-color: rgba(255, 255, 255, 0.25);

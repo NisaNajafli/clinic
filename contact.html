@@ -11,8 +11,7 @@
   <title>Clinic</title>
 </head>
 <body>
-<header>
-    <div class="modal fade" id="clinicModalLabel" tabindex="-1"
+  <div class="modal fade" id="clinicModalLabel" tabindex="-1"
           aria-labelledby="clinicModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
@@ -54,6 +53,7 @@
           </div>
         </div>
     </div>
+<header>
   <div class="header-top">
     <div class="header-top-content container">
       <a class="onlineregistration" href=""
@@ -209,7 +209,6 @@
 
   <section class="contact__section">
     <div class="container">
-      <h2>Контакты</h2>
 
       <div class="contact__wrapper">
         <div class="contact__map">
@@ -252,7 +251,8 @@
             <a href="mailto:dostupmed@bk.ru"> <span>Электронная почта:</span> dostupmed@bk.ru</a>
           </div>
 
-          <a href="#" class="contact__btn">Написать нам</a>
+          <a href="#" class="contact__btn" data-bs-toggle="modal"
+          data-bs-target="#clinicModalLabel">Написать нам</a>
         </div>
       </div>
     </div>
